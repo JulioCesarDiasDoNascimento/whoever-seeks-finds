@@ -1,5 +1,6 @@
 package com.unp.finds;
 
+import com.unp.finds.domain.Negocio;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
