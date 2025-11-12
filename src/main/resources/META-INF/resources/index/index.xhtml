@@ -1,15 +1,137 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
-                xmlns:h="http://xmlns.jcp.org/jsf/html"
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 xmlns:p="http://primefaces.org/ui"
                 template="/layout/layout.xhtml">
+
     <ui:define name="content">
-        <h:panelGroup>
-            <h2>Página Inicial</h2>
-            <h:outputText value="JSF está funcionando!"/>
-            <br/><br/>
-            <p:commandButton type="button" value="Testar" onclick="alert('Olá do Quem Procura Acha!'); return false;"
-                             icon="pi pi-check"/>
-        </h:panelGroup>
+        <div class="dashboard-container">
+            <div class="filtros-panel">
+                <div class="filtros-titulo">Filtros</div>
+                <div class="filtros-subtitulo">Refine sua busca por estabelecimentos</div>
+
+
+                <div class="filtro-secao">
+                    <div class="filtro-secao-titulo">Categorias</div>
+
+                    <div class="categoria-item selecionado">
+                        <i class="pi pi-star"></i>
+                        <span>Restaurantes</span>
+                    </div>
+
+                    <div class="categoria-item">
+                        <i class="pi pi-shopping-cart"></i>
+                        <span>Lojas</span>
+                    </div>
+
+                    <div class="categoria-item">
+                        <i class="pi pi-wrench"></i>
+                        <span>Serviços</span>
+                    </div>
+                </div>
+
+                <!-- Avaliação -->
+                <div class="filtro-secao">
+                    <div class="filtro-secao-titulo">Avaliação</div>
+
+                    <div class="estrelas-filtro">
+                        <span class="star">★★★★</span>
+                        <span class="star-empty">☆</span>
+                        <span style="margin-left: 0.5rem; color: #666;">4 estrelas ou mais</span>
+                    </div>
+
+                    <div class="estrelas-filtro">
+                        <span class="star">★★★</span>
+                        <span class="star-empty">☆☆</span>
+                        <span style="margin-left: 0.5rem; color: #666;">3 estrelas ou mais</span>
+                    </div>
+                </div>
+
+                <!-- Funcionamento -->
+                <div class="filtro-secao">
+                    <div class="filtro-secao-titulo">Funcionamento</div>
+
+                    <div class="checkbox-aberto">
+                        <p:selectBooleanCheckbox value="#{false}" />
+                        <label>Aberto agora</label>
+                    </div>
+                </div>
+
+                <p:commandButton value="Aplicar Filtros" styleClass="aplicar-filtros-btn"
+                                 icon="pi pi-filter" />
+            </div>
+
+            <!-- Painel de Resultados -->
+            <div class="resultados-panel">
+                <div class="resultados-header">
+                    <div class="resultados-titulo">Resultados da Busca</div>
+                    <div class="resultados-info">Mostrando 4 resultados para "Restaurantes"</div>
+                </div>
+
+                <div class="estabelecimento-card">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&amp;h=300&amp;fit=crop"
+                         alt="Restaurante" class="estabelecimento-imagem"/>
+                    <div class="estabelecimento-info">
+                        <div class="estabelecimento-nome">Sabor Divino Restaurante</div>
+                        <div class="estabelecimento-rating">
+                            <span class="star-filled">★★★★</span>
+                            <span class="star-empty">☆</span>
+                            <span class="rating-count">(128)</span>
+                        </div>
+                        <div class="estabelecimento-categoria">Restaurante • Av. Principal, 123</div>
+                    </div>
+                </div>
+
+                <div class="estabelecimento-card">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&amp;h=300&amp;fit=crop"
+                         alt="Pizza" class="estabelecimento-imagem"/>
+                    <div class="estabelecimento-info">
+                        <div class="estabelecimento-nome">Pizza Nostra</div>
+                        <div class="estabelecimento-rating">
+                            <span class="star-filled">★★★★</span>
+                            <span class="star-empty">☆</span>
+                            <span class="rating-count">(95)</span>
+                        </div>
+                        <div class="estabelecimento-categoria">Pizzaria • Rua da Matriz, 45</div>
+                    </div>
+                </div>
+
+                <div class="estabelecimento-card">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&amp;h=300&amp;fit=crop"
+                         alt="Café" class="estabelecimento-imagem"/>
+                    <div class="estabelecimento-info">
+                        <div class="estabelecimento-nome">Café Aconchego</div>
+                        <div class="estabelecimento-rating">
+                            <span class="star-filled">★★★★★</span>
+                            <span class="rating-count">(210)</span>
+                        </div>
+                        <div class="estabelecimento-categoria">Cafeteria • Alameda das Flores, 78</div>
+                    </div>
+                </div>
+
+                <div class="estabelecimento-card">
+                    <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&amp;h=300&amp;fit=crop"
+                         alt="Sushi" class="estabelecimento-imagem"/>
+                    <div class="estabelecimento-info">
+                        <div class="estabelecimento-nome">Sushi Zen</div>
+                        <div class="estabelecimento-rating">
+                            <span class="star-filled">★★★★★</span>
+                            <span class="rating-count">(150)</span>
+                        </div>
+                        <div class="estabelecimento-categoria">Japonês • Travessa dos Peixes, 10</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mapa-panel">
+                <iframe id="mapa"
+                        title="Mapa de estabelecimentos em Natal/RN"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63475.64881908384!2d-35.24092344999999!3d-5.7944778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b3aaac26460d71%3A0x5ba4b124d0c2c2b2!2sNatal%2C%20RN!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
     </ui:define>
 </ui:composition>
