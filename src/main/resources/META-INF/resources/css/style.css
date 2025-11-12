@@ -399,6 +399,276 @@
     font-size: 0.9rem;
 }
 
+/* Avaliação de Estabelecimento */
+.avaliacao-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.breadcrumb {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #666;
+    text-decoration: none;
+}
+
+.breadcrumb span {
+    margin: 0 0.5rem;
+}
+
+.avaliacao-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.coluna-imagens {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.imagem-principal {
+    width: 100%;
+    height: 300px;
+    background: #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.img-grande {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagens-pequenas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.img-pequena-wrapper {
+    width: 100%;
+    height: 150px;
+    background: #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.img-pequena {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.coluna-detalhes {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.estabelecimento-titulo {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.estabelecimento-meta {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.avaliacao-nota {
+    color: #ffa500;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.avaliacao-nota::before {
+    content: '\2605';
+    margin-right: 0.25rem;
+}
+
+.total-avaliacoes {
+    color: #666;
+}
+
+.estabelecimento-status {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.categoria-badge {
+    padding: 0.25rem 0.75rem;
+    background: #e0e0e0;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+.status-aberto {
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+.estabelecimento-info-secao {
+    margin-top: 2rem;
+}
+
+.secao-titulo {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-item i {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 0.25rem;
+}
+
+.info-texto strong {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.info-texto p {
+    margin: 0;
+    color: #666;
+}
+
+.coluna-direita {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mapa-box {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.mapa-iframe {
+    width: 100%;
+    height: 250px;
+    background: #d4f1dc;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.btn-ver-mapa {
+    width: 100%;
+    padding: 0.75rem;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.avaliacoes-box {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.avaliacoes-titulo {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.deixar-avaliacao {
+    background: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.deixar-avaliacao-texto {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.estrelas-input {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    color: #ffa500;
+    margin-bottom: 1rem;
+}
+
+.estrelas-input i {
+    cursor: pointer;
+}
+
+.comentario-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.btn-enviar-avaliacao {
+    width: 100%;
+    background: #a8d5e2 !important;
+    border: none !important;
+}
+
+.lista-avaliacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.avaliacao-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 1rem;
+}
+
+.avaliacao-usuario {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.usuario-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e0e0e0;
+}
+
+.usuario-nome {
+    display: block;
+}
+
+.usuario-estrelas {
+    color: #ffa500;
+    font-size: 0.9rem;
+}
+
+.avaliacao-texto {
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+}
 .mapa-panel {
     position: relative;
     overflow: hidden;

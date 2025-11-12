@@ -1,0 +1,156 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                template="/layout/layout.xhtml">
+
+    <ui:define name="content">
+        <div class="avaliacao-container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="#">Home</a>
+                <span>/</span>
+                <a href="#">Restaurantes</a>
+                <span>/</span>
+                <span>Camaroes Potiguar</span>
+            </div>
+
+            <!-- Grid Principal -->
+            <div class="avaliacao-grid">
+                <!-- Coluna Esquerda - Imagens -->
+                <div class="coluna-imagens">
+                    <div class="imagem-principal">
+                        <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&amp;h=300&amp;fit=crop" alt="Principal" class="img-grande"/>
+                    </div>
+                    <div class="imagens-pequenas">
+                        <div class="img-pequena-wrapper">
+                            <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&amp;h=300&amp;fit=crop" alt="Foto 1" class="img-pequena"/>
+                        </div>
+                        <div class="img-pequena-wrapper">
+                            <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&amp;h=300&amp;fit=crop" alt="Foto 2" class="img-pequena"/>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna Centro - Detalhes -->
+                <div class="coluna-detalhes">
+                    <div class="estabelecimento-header">
+                        <h1 class="estabelecimento-titulo">Camaroes Potiguar</h1>
+                        <div class="estabelecimento-meta">
+                            <span class="avaliacao-nota">4.9</span>
+                            <span class="total-avaliacoes">(359 avaliacoes)</span>
+                        </div>
+                        <div class="estabelecimento-status">
+                            <span class="categoria-badge">Restaurante</span>
+                            <span class="status-aberto">Aberto agora</span>
+                        </div>
+                    </div>
+
+                    <div class="estabelecimento-info-secao">
+                        <h3 class="secao-titulo">Informacoes</h3>
+
+                        <div class="info-item">
+                            <i class="pi pi-map-marker"><!-- icon --></i>
+                            <div class="info-texto">
+                                <strong>Endereco</strong>
+                                <p>R. Pedro Fonseca Filho, 8887 - Ponta Negra, Natal - RN, 59090-080</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="pi pi-clock"><!-- icon --></i>
+                            <div class="info-texto">
+                                <strong>Horario</strong>
+                                <p>Seg-Sab: 11h30 - 23h, Dom: 11h30 - 22h</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="pi pi-phone"><!-- icon --></i>
+                            <div class="info-texto">
+                                <strong>Telefone</strong>
+                                <p>(84) 3209-2425</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="pi pi-globe"><!-- icon --></i>
+                            <div class="info-texto">
+                                <strong>Website</strong>
+                                <p>www.camaroes.com.br</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna Direita - Mapa e Avaliacoes -->
+                <div class="coluna-direita">
+                    <!-- Mapa -->
+                    <div class="mapa-box">
+                        <div class="mapa-iframe">
+                            <iframe id="mapa"
+                                    title="Mapa de estabelecimentos em Natal/RN"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63475.64881908384!2d-35.24092344999999!3d-5.7944778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b3aaac26460d71%3A0x5ba4b124d0c2c2b2!2sNatal%2C%20RN!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                                    style="border:0;"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <button class="btn-ver-mapa">Ver no Mapa</button>
+                    </div>
+
+                    <!-- Avaliacoes -->
+                    <div class="avaliacoes-box">
+                        <h3 class="avaliacoes-titulo">Avaliacoes de Clientes</h3>
+
+                        <div class="deixar-avaliacao">
+                            <p class="deixar-avaliacao-texto">Deixe sua avaliacao</p>
+                            <div class="estrelas-input">
+                                <i class="pi pi-star"><!-- star --></i>
+                                <i class="pi pi-star"><!-- star --></i>
+                                <i class="pi pi-star"><!-- star --></i>
+                                <i class="pi pi-star"><!-- star --></i>
+                                <i class="pi pi-star"><!-- star --></i>
+                            </div>
+                            <h:inputTextarea class="comentario-input" placeholder="Compartilhe sua experiencia..." rows="3"><!-- input --></h:inputTextarea>
+                            <p:commandButton value="Enviar Avaliacao" styleClass="btn-enviar-avaliacao"/>
+                        </div>
+
+                        <!-- Lista de Avaliacoes -->
+                        <div class="lista-avaliacoes">
+                            <div class="avaliacao-item">
+                                <div class="avaliacao-usuario">
+                                    <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&amp;h=300&amp;fit=crop" alt="Ana Clara" class="usuario-avatar"/>
+                                    <div>
+                                        <strong class="usuario-nome">Ana Clara</strong>
+                                        <div class="usuario-estrelas">5 estrelas</div>
+                                    </div>
+                                </div>
+                                <p class="avaliacao-texto">
+                                    "A comida e simplesmente divina! O camarao internacional e imperdivel.
+                                    Ambiente sofisticado e atendimento impecavel."
+                                </p>
+                            </div>
+
+                            <div class="avaliacao-item">
+                                <div class="avaliacao-usuario">
+                                    <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&amp;h=300&amp;fit=crop" alt="Bruno Costa" class="usuario-avatar"/>
+                                    <div>
+                                        <strong class="usuario-nome">Bruno Costa</strong>
+                                        <div class="usuario-estrelas">4 estrelas</div>
+                                    </div>
+                                </div>
+                                <p class="avaliacao-texto">
+                                    "Lugar muito agradavel, mas costuma ter fila de espera nos fins de semana.
+                                    A comida compensa a espera, mas venha com paciencia."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>
+
