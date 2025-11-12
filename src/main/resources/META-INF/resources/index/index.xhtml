@@ -1,18 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html>
-<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:p="http://primefaces.org/ui">
-<h:head>
-    <title>whoever seeks finds</title>
-</h:head>
-<h:body>
-    <h1>Olá Júlio César!</h1>
-    <h:form>
-        <h:outputText value="JSF está funcionando! 🚀"/>
-        <br/><br/>
-        <p:commandButton type="button" value="Olá whoever" onclick="alert('Olá do whoever!'); return false;"/>
-    </h:form>
-</h:body>
-</html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/layout/layout.xhtml">
+    <ui:define name="content">
+        <h:panelGroup>
+            <h2>Página Inicial</h2>
+            <h:outputText value="JSF está funcionando!"/>
+            <br/><br/>
+            <p:commandButton type="button" value="Testar" onclick="alert('Olá do Quem Procura Acha!'); return false;"
+                             icon="pi pi-check"/>
+        </h:panelGroup>
+    </ui:define>
+</ui:composition>

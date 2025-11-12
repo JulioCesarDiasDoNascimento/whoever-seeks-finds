@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="pt-br"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Quem Procura Acha</title>
+    <style>
+        body { margin:0; font-family: Arial, sans-serif; background:#f5f6f8; }
+        .layout-wrapper { display:flex; flex-direction:column; min-height:100vh; }
+        .topbar { box-shadow:0 2px 4px rgba(0,0,0,.08); z-index:10; }
+        .content { flex:1; padding:2rem; }
+    </style>
+</h:head>
+<h:body>
+    <div class="layout-wrapper">
+        <h:form id="topbarForm">
+            <p:menubar styleClass="topbar">
+                <p:menuitem value="Início" outcome="/index/index.xhtml" icon="pi pi-home" />
+                <p:menuitem value="Mapa" icon="pi pi-map"/>
+                <p:menuitem value="Cadastrar Estabelecimento" icon="pi pi-building"/>
+            </p:menubar>
+        </h:form>
+        <p:growl id="messages" />
+        <div class="content">
+            <ui:insert name="content">
+                <h:outputText value="Conteúdo padrão: nenhuma página filha foi carregada." />
+            </ui:insert>
+        </div>
+    </div>
+</h:body>
+
+</html>
