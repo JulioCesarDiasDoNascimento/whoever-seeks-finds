@@ -399,7 +399,7 @@
     font-size: 0.9rem;
 }
 
-/* Avaliação de Estabelecimento */
+/* Avalia??o de Estabelecimento */
 .avaliacao-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -692,4 +692,178 @@
 
 .checkbox-aberto label {
     margin-left: 0.5rem;
+}
+
+/* Mapa de Analise */
+.mapa-analise-container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    height: calc(100vh - 100px);
+    gap: 0;
+    margin: -2rem;
+}
+
+.mapa-sidebar {
+    background: white;
+    padding: 2rem;
+    overflow-y: auto;
+    border-right: 1px solid #e0e0e0;
+}
+
+.mapa-header {
+    margin-bottom: 1.5rem;
+}
+
+.mapa-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.mapa-logo i {
+    color: #2e7d32;
+}
+
+.mapa-titulo {
+    font-size: 1.1rem;
+}
+
+.mapa-subtitulo {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.mapa-busca {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.mapa-busca i {
+    color: #666;
+}
+
+.mapa-input-busca {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 1rem;
+}
+
+.analise-secao {
+    margin-bottom: 2rem;
+}
+
+.analise-titulo {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.analise-bairro {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.analise-item {
+    margin-bottom: 1.5rem;
+}
+
+.analise-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.analise-barra {
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.barra-preenchida {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s;
+}
+
+.barra-alta {
+    background: #4caf50;
+}
+
+.barra-moderada {
+    background: #ffc107;
+}
+
+.barra-bom {
+    background: #2196f3;
+}
+
+.analise-nivel {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.nivel-alto {
+    color: #4caf50;
+}
+
+.nivel-moderado {
+    color: #ffc107;
+}
+
+.nivel-bom {
+    color: #2196f3;
+}
+
+.resultado-box {
+    background: #e8f5e9;
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    gap: 1rem;
+}
+
+.resultado-icon {
+    font-size: 2rem;
+    color: #4caf50;
+}
+
+.resultado-conteudo {
+    flex: 1;
+}
+
+.resultado-titulo {
+    font-size: 1.2rem;
+    color: #2e7d32;
+    margin: 0 0 0.5rem 0;
+}
+
+.resultado-texto {
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.mapa-conteudo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.mapa-conteudo iframe {
+    display: block;
 }

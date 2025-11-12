@@ -1,0 +1,81 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                template="/layout/layout.xhtml">
+
+    <ui:define name="content">
+        <div class="mapa-analise-container">
+            <div class="mapa-sidebar">
+                <div class="mapa-header">
+                    <div class="mapa-logo">
+                        <i class="pi pi-map-marker"><!-- icon --></i>
+                        <span class="mapa-titulo">Quem Procura Acha</span>
+                    </div>
+                    <p class="mapa-subtitulo">Analise de Viabilidade</p>
+                </div>
+
+                <div class="mapa-busca">
+                    <i class="pi pi-search"></i>
+                    <h:inputText class="mapa-input-busca" placeholder="Tirol" value=""/>
+                </div>
+
+                <div class="analise-secao">
+                    <h2 class="analise-titulo">Analise da Regiao</h2>
+                    <p class="analise-bairro">Bairro Tirol</p>
+
+                    <div class="analise-item">
+                        <span class="analise-label">Potencial de Clientes</span>
+                        <div class="analise-barra">
+                            <div class="barra-preenchida barra-alta" style="width: 85%;"></div>
+                        </div>
+                        <span class="analise-nivel nivel-alto">Alto</span>
+                    </div>
+
+                    <div class="analise-item">
+                        <span class="analise-label">Concorrencia Local</span>
+                        <div class="analise-barra">
+                            <div class="barra-preenchida barra-moderada" style="width: 60%;"></div>
+                        </div>
+                        <span class="analise-nivel nivel-moderado">Moderada</span>
+                    </div>
+
+                    <div class="analise-item">
+                        <span class="analise-label">Acesso e Visibilidade</span>
+                        <div class="analise-barra">
+                            <div class="barra-preenchida barra-bom" style="width: 75%;"><!-- bar --></div>
+                        </div>
+                        <span class="analise-nivel nivel-bom">Bom</span>
+                    </div>
+                </div>
+
+
+                <div class="resultado-box">
+                    <div class="resultado-icon">
+                        <i class="pi pi-thumbs-up"></i>
+                    </div>
+                    <div class="resultado-conteudo">
+                        <h3 class="resultado-titulo">Regiao Promissora</h3>
+                        <p class="resultado-texto">
+                            Baseado nos dados, esta regiao apresenta um alto potencial de clientes com
+                            concorrencia moderada, sendo considerada uma area excelente para o seu negocio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mapa-conteudo">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63453.64!2d-35.2!3d-5.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwNDgnMDAuMCJTIDM1wrAxMicwMC4wIlc!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                    title="Mapa de analise da regiao"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>
